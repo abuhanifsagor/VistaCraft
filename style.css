@@ -46,7 +46,6 @@ section {
   width: 100%;
 }
 img {
-  max-width: 100%;
   width: 100%;
   height: auto;
   display: block;
@@ -79,10 +78,9 @@ img {
 
 /*INFO: Navbar*/
 .navbar {
-    background: var(--light-Orange-color) !important;
-    padding: 10px 0;
+  background: var(--light-Orange-color) !important;
+  padding: 10px 0;
 }
-
 
 .navbar-brand,
 .offcanvas-title {
@@ -122,30 +120,31 @@ img {
   }
 }
 
-/*INFO: Media Queries*/
+/*INFO: about Section*/
 
-/*INFO: Small Devices*/
+.about_container {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.about_images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
 
-@media screen and (max-width: 576px) {
-.header {
-  text-align: center;
-  padding: 0;
-  max-width: 900px;
-  margin: 0 auto;
-  h1 {
-    font-size: 2.2rem;
+.about_content {
+  max-width: 500px;
+  h2 {
+    font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   p {
-    font-size: .8rem;
+    font-size: 1rem;
     font-weight: 400;
     color: var(--gray-color);
-    margin-bottom: 15px;
-  }
-  .mybtn {
-    font-size: .8rem;
-    padding: 10px 10px;
     margin-bottom: 20px;
   }
 }
@@ -163,7 +162,63 @@ img {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/*INFO: Media Queries*/
+
+/*INFO: Small Devices*/
+
+@media screen and (max-width: 576px) {
+  .mybtn {
+    font-size: 0.8rem;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+  }
+  .header {
+    text-align: center;
+    padding: 0;
+    max-width: 900px;
+    margin: 0 auto;
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--gray-color);
+      margin-bottom: 15px;
+    }
+  }
+
+  .about_container {
+    gap: 20px;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -175,31 +230,48 @@ img {
 /*INFO: Medium Devices*/
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
+  .header {
+    text-align: center;
+    padding: 30px 0;
+    max-width: 900px;
+    margin: 0 auto;
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--gray-color);
+      margin-bottom: 15px;
+    }
+    .mybtn {
+      font-size: 0.8rem;
+      padding: 10px 10px;
+      margin-bottom: 20px;
+    }
+  }
+  .about_container {
+    gap: 20px;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .about_images{
+    grid-template-columns: repeat(2, 300px);
+  }
+  .about_content{
+    h2{
+      font-size: 1.7rem;
+    }
+  }
 
 
-    .header {
-        text-align: center;
-        padding: 0;
-        max-width: 900px;
-        margin: 0 auto;
-        h1 {
-          font-size: 2.2rem;
-          font-weight: 700;
-          margin-bottom: 10px;
-        }
-        p {
-          font-size: .8rem;
-          font-weight: 400;
-          color: var(--gray-color);
-          margin-bottom: 15px;
-        }
-        .mybtn {
-          font-size: .8rem;
-          padding: 10px 10px;
-          margin-bottom: 20px;
-        }
-      }
-      
+
+
+
+
+
 
 
 
@@ -212,7 +284,6 @@ img {
 
 
 }
-
 
 
 
@@ -226,46 +297,26 @@ img {
 /*INFO: Large Devices*/
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-
-
-    .header {
-        text-align: center;
-        padding: 0;
-        max-width: 900px;
-        margin: 0 auto;
-        h1 {
-          font-size: 2.2rem;
-          font-weight: 700;
-          margin-bottom: 10px;
-        }
-        p {
-          font-size: .8rem;
-          font-weight: 400;
-          color: var(--gray-color);
-          margin-bottom: 15px;
-        }
-        .mybtn {
-          font-size: .8rem;
-          padding: 10px 10px;
-          margin-bottom: 20px;
-        }
-      }
-
-
-
-
-
-
-
+  .header {
+    padding: 30px 0;
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--gray-color);
+      margin-bottom: 15px;
+    }
+    .mybtn {
+      font-size: 0.8rem;
+      padding: 10px 10px;
+      margin-bottom: 20px;
+    }
+  }
 }
-
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
-    
-
-
-
-
 }
-
-
