@@ -346,7 +346,31 @@ img {
 footer {
   background: var(--footer-color);
 }
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.603);
+  backdrop-filter: blur(4.1px);
+  -webkit-backdrop-filter: blur(4.1px);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.preload {
+  width: 150px;
+  height: 150px;
+  
+}
 
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out;
+}
 
 
 /*INFO: Media Queries*/
