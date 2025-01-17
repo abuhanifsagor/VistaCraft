@@ -320,8 +320,26 @@ img {
 }
 
 
-
-
+.slider_list{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    transition: var(--transition);
+    margin-top: 3.5rem;
+    .slider_item{
+      transition: var(--transition);
+      img{
+        transform: scale(.5);
+        transition: var(--transition);
+      }
+    }
+}
+.slider_list:hover .slider_item img{
+    filter: grayscale(1);
+}
+.slider_list:hover .slider_item:hover img{
+    filter: grayscale(0);
+} 
 
 
 
